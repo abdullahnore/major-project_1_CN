@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Music player</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  </link>
+
+  <!-- icon boostrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <main>
+    <!-- navbar starts -->
+    <nav class="mainnav shadow-md navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="bi-soundwave"></i>Na
+          <div style="font-size: 13px">listen to your fav</div>
+        </a>
+        <div>
+          <div class="input-group ">
+            <input type="text" class="form-control" placeholder="Search song" >
+            <span class=" bg-dark input-group-text text-white" id="basic-addon2"><i class="bi bi-search"></i></span>
+          </div>
+        </div>
+        <!-- social media icons -->
+        <div class="text-white h5 m-auto p-2 social-hide">
+          
+            <a><i class="bi bi-instagram"></i></a>
+          
+          <a><i class="bi bi-twitter"></i></a>
+          <a><i class="bi  bi-facebook"></i></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav muted-hover ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Discover</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trending</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">New Release</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Genre
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#">Pop</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                
+              </ul>
+            </li>
+            <!--  profile dropdown starts -->
+            <img src="images/abdullah2.jpg" style="width: 40px; height: 40px; border-radius: 100%" />
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                hi ANore
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile <i class="bi bi-person"></i></a></li>
+                <li><a class="dropdown-item" href="#">Logout <i class="bi bi-box-arrow-right"></i></a></li>
+               
+                
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- hero area -->
+    <div class="hero-area p-2 ">
+      <ul class="nav hero-nav nav-pills m-4 mb-3  " id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active text-white" id="pills-queue-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-queue" type="button" role="tab">Queue</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link text-white" id="pills-newrelease-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-newrelease" type="button" role="tab">New Release</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link text-white" id="pills-trending-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-trending" type="button" role="tab">Trending</button>
+        </li>
+
+      </ul>
+      
+      <div class="tab-content" id="pills-tabContent">
+        <!-- queue -->
+        <div class="tab-pane fade show active " id="pills-queue" role="tabpanel" aria-labelledby="pills-queue-tab"
+          tabindex="0">
+
+
+          <!-- list starts  -->
+          <div class=" m-2 ms-4 col-md-6 row song-small align-items-center ">
+            <div class="  col-2  col-sm-1  col-sm-1 h3">01</div>
+            <div class="col d-flex">
+              <img src="images/1.jpg" class="img-small rounded">
+              <div class="ms-1">
+                <div>Milk</div>
+                <small class="text-muted muted-hover">Goose House</small>
+              </div>
+
+            </div>
+            <div class="col-3 col-sm-2 ">5:00 <i class="bi bi-play"></i></div>
+          </div>
+          <!-- liste ends -->
+
+          <!-- list starts  -->
+          <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+            <div class="  col-2  col-sm-1 h3">02</div>
+            <div class="col d-flex">
+              <img src="images/2.jpg" class="img-small rounded">
+              <div class="ms-1">
+                <div>
+                  THE BOOK 2</div>
+                <small class="text-muted muted-hover">YOASOBI</small>
+              </div>
+
+            </div>
+            <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i></div>
+          </div>
+          <!-- liste ends -->
+
+            <!-- list starts  -->
+            <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+              <div class="  col-2  col-sm-1 h3">03</div>
+              <div class="col d-flex">
+                <img src="images/3.jpg" class="img-small rounded">
+                <div class="ms-1">
+                  <div>
+                      My song your song
+                  </div>
+                  <small class="text-muted muted-hover">Ikimonogakari</small>
+                </div>
+  
+              </div>
+              <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i></div>
+            </div>
+            <!-- liste ends -->
+            <!-- list starts  -->
+            <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+              <div class="  col-2  col-sm-1 h3">04</div>
+              <div class="col d-flex">
+                <img src="images/4.jpg" class="img-small rounded">
+                <div class="ms-1">
+                  <div>
+                      Your Name.
+                  </div>
+                  <small class="text-muted muted-hover">Radwimps</small>
+                </div>
+  
+              </div>
+              <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i></div>
+            </div>
+            <!-- liste ends -->
+                <!-- list starts  -->
+                <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+                  <div class="  col-2  col-sm-1 h3">05</div>
+                  <div class="col d-flex">
+                    <img src="images/5.jpg" class="img-small rounded">
+                    <div class="ms-1">
+                      <div>
+                         homura
+                      </div>
+                      <small class="text-muted muted-hover">Lisa</small>
+                    </div>
+      
+                  </div>
+                  <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i></div>
+                </div>
+                <!-- liste ends -->
+        </div>
+        <!-- queue ends -->
+
+        <!-- new release -->
+        <div class="tab-pane fade " id="pills-newrelease" role="tabpanel" aria-labelledby="pills-newrelease-tab"
+          tabindex="0">
+
+          <!-- list starts  -->
+          <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+            <div class="  col-2  col-sm-1 h3">06</div>
+            <div class="col d-flex">
+              <img src="images/6.jpg" class="img-small rounded">
+              <div class="ms-1">
+                <div>Akeboshi</div>
+                <small>Lisa</small>
+              </div>
+
+            </div>
+            <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+            </div>
+          </div>
+          <!-- liste ends -->
+           <!-- list starts  -->
+           <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+            <div class="  col-2  col-sm-1 h3">07</div>
+            <div class="col d-flex">
+              <img src="images/7.jpg" class="img-small rounded">
+              <div class="ms-1">
+                <div>Gurenge</div>
+                <small>Lisa</small>
+              </div>
+
+            </div>
+            <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+            </div>
+          </div>
+          <!-- liste ends -->
+            <!-- list starts  -->
+            <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+              <div class="  col-2  col-sm-1 h3">08</div>
+              <div class="col d-flex">
+                <img src="images/8.jpg" class="img-small rounded">
+                <div class="ms-1">
+                  <div>
+                    Uchiagehanabi</div>
+                  <small>DAOKO</small>
+                </div>
+  
+              </div>
+              <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+              </div>
+            </div>
+            <!-- liste ends -->
+              <!-- list starts  -->
+              <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+                <div class="  col-2  col-sm-1 h3">09</div>
+                <div class="col d-flex">
+                  <img src="images/9.jpg" class="img-small rounded">
+                  <div class="ms-1">
+                    <div>
+                      One Last Kiss</div>
+                    <small>Hikaru Utada</small>
+                  </div>
+    
+                </div>
+                <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+                </div>
+              </div>
+              <!-- liste ends -->
+                 <!-- list starts  -->
+                 <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+                  <div class="  col-2  col-sm-1 h3">10</div>
+                  <div class="col d-flex">
+                    <img src="images/10.jpg" class="img-small rounded">
+                    <div class="ms-1">
+                      <div>
+                        Kick back</div>
+                      <small>Kenshi Yonezu
+                        </small>
+                    </div>
+      
+                  </div>
+                  <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+                  </div>
+                </div>
+                <!-- liste ends -->
+        </div>
+        <!-- new release  end -->
+        <!-- trending -->
+        <div class="tab-pane fade " id="pills-trending" role="tabpanel" aria-labelledby="pills-trending-tab"
+          tabindex="0" >
+          
+          <!-- list starts  -->
+          <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+            <div class="  col-2  col-sm-1 h3">11</div>
+            <div class="col d-flex">
+              <img src="images/10.jpg" class="img-small rounded">
+              <div class="ms-1">
+                <div>
+                  Kick back</div>
+                <small>Kenshi Yonezu
+                  </small>
+              </div>
+
+            </div>
+            <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+            </div>
+          </div>
+          <!-- liste ends -->
+         
+ 
+
+      <!-- list starts  -->
+      <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+        <div class="  col-2  col-sm-1 h3">12</div>
+        <div class="col d-flex">
+          <img src="images/12.jpg" class="img-small rounded">
+          <div class="ms-1">
+            <div>
+              Eve</div>
+            <small>Kaikai Kitan / Ao No Waltz
+              </small>
+          </div>
+
+        </div>
+        <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+        </div>
+      </div>
+      <!-- liste ends -->
+         <!-- list starts  -->
+         <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+          <div class="  col-2  col-sm-1 h3">13</div>
+          <div class="col d-flex">
+            <img src="images/13.jpg" class="img-small rounded">
+            <div class="ms-1">
+              <div>
+               Color</div>
+              <small>yama
+                </small>
+            </div>
+  
+          </div>
+          <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+          </div>
+        </div>
+        <!-- liste ends -->
+            <!-- list starts  -->
+            <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+              <div class="  col-2  col-sm-1 h3">14</div>
+              <div class="col d-flex">
+                <img src="images/14.jpg" class="img-small rounded">
+                <div class="ms-1">
+                  <div>
+                   
+Ladder</div>
+                  <small>
+                    
+                    Anonymouz
+                    
+                    </small>
+                </div>
+      
+              </div>
+              <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+              </div>
+            </div>
+            <!-- liste ends -->
+                <!-- list starts  -->
+         <div class=" m-2 ms-4 col-md-6 row song-small align-items-center">
+          <div class="  col-2  col-sm-1 h3">15</div>
+          <div class="col d-flex">
+            <img src="images/15.jpg" class="img-small rounded">
+            <div class="ms-1">
+              <div>
+                Suzume (feat. Toaka)
+                
+               
+                </div>
+              <small>RADWIMPS
+                
+                </small>
+            </div>
+  
+          </div>
+          <div class="col-3 col-sm-2">5:00 <i class="bi bi-play"></i>
+          </div>
+        </div>
+        <!-- liste ends -->
+        </div>
+        <!-- trending  end -->
+
+      </div>
+    </div>
+      <!-- hero area end -->
+
+
+      <!-- start category -->
+      <!-- my mix 1 music -->
+      <h5 class="px-4 song-category-title pt-4 ">My mix 1 <a><small class="float-end">View more <i class="bi bi-box-arrow-up-right"></i></small></a>
+      </h5>
+      <section class="x-1 p-2 mx-sm-4 p-sm-4 d-flex justify-content-center flex-wrap">
+       
+        <!-- song card start -->
+ <div class="m-4  " style=" width: 200px; overflow:hidden; ">
+  <!--  play effect -->
+  <div class="big-song-img " >
+  <img src="images/1.jpg" class=" rounded img-fluid img-big">
+  <a href="#">
+     <div class="big-song-hover">
+    <i class="bi bi-play h1 text-primary" > </i>
+  </div>
+</a>
+</div>
+ <!--  play effect end -->
+  <div class="">
+    <div class="lead text-white">Milk</div>
+   <small class="text-muted">Goose House</small>
+    
+  </div>
+ </div>
+      <!-- song card end -->
+         <!-- song card start -->
+ <div class="m-4  " style=" width: 200px; overflow:hidden; ">
+  <!--  play effect -->
+  <div class="big-song-img " >
+  <img src="images/3.jpg" class=" rounded img-fluid img-big">
+  <a href="#">
+     <div class="big-song-hover">
+    <i class="bi bi-play h1 text-primary" ></i>
+  </div>
+</a>
+</div>
+ <!--  play effect end -->
+  <div class="">
+    <div class="lead text-white">My song your song</div>
+   <small class="text-muted">Ikimonogakari</small>
+    
+  </div>
+ </div>
+      <!-- song card end -->
+         <!-- song card start -->
+ <div class="m-4  " style=" width: 200px; overflow:hidden; ">
+  <!--  play effect -->
+  <div class="big-song-img " >
+  <img src="images/5.jpg" class=" rounded img-fluid img-big">
+  <a href="#">
+     <div class="big-song-hover">
+    <i class="bi bi-play h1 text-primary" ></i>
+  </div>
+</a>
+</div>
+ <!--  play effect end -->
+  <div class="">
+    <div class="lead text-white">homura
+     </div>
+   <small class="text-muted"> Lisa</small>
+    
+  </div>
+ </div>
+      <!-- song card end -->
+         <!-- song card start -->
+ <div class="m-4  " style=" width: 200px; overflow:hidden; ">
+  <!--  play effect -->
+  <div class="big-song-img " >
+  <img src="images/7.jpg" class=" rounded img-fluid img-big">
+  <a href="#">
+     <div class="big-song-hover">
+    <i class="bi bi-play h1 text-primary" ></i>
+  </div>
+</a>
+</div>
+ <!--  play effect end -->
+  <div class="">
+    <div class="lead text-white">Gurenge
+     </div>
+   <small class="text-muted"> Lisa</small>
+    
+  </div>
+ </div>
+      <!-- song card end -->
+       <!-- song card start -->
+ <div class="m-4  " style=" width: 200px; overflow:hidden; ">
+  <!--  play effect -->
+  <div class="big-song-img " >
+  <img src="images/9.jpg" class=" rounded img-fluid img-big">
+  <a href="#">
+     <div class="big-song-hover">
+    <i class="bi bi-play h1 text-primary" ></i>
+  </div>
+</a>
+</div>
+ <!--  play effect end -->
+  <div class="">
+    <div class="lead text-white">One Last Kiss
+     </div>
+   <small class="text-muted"> Hikaru Utadae</small>
+    
+  </div>
+ </div>
+      <!-- song card end -->
+      
+      </section>
+      <!--my mix 1 music end  -->
+       <!-- my mix 2 music -->
+       <h5 class="px-4 song-category-title pt-4 ">My mix 2 <a><small class="float-end">View more <i class="bi bi-box-arrow-up-right"></i></small></a>
+       </h5>
+       <section class="mx-1 p-2 mx-sm-4 p-sm-4 d-flex justify-content-center flex-wrap">
+         <!-- song card start -->
+ <div class="m-4  " style=" width: 200px; overflow:hidden;   ">
+  <!--  play effect -->
+  <div class="big-song-img " >
+  <img src="images/10.jpg" class=" rounded img-fluid img-big">
+  <a href="#">
+     <div class="big-song-hover">
+    <i class="bi bi-play h1 text-primary" ></i>
+  </div>
+</a>
+</div>
+ <!--  play effect end -->
+  <div class="">
+    <div class="lead text-white">Kick back
+      </div>
+   <small class="text-muted">Kenshi Yonezu</small>
+    
+  </div>
+ </div>
+      <!-- song card end -->
+         <!-- song card start -->
+  <div class="m-4  " style=" width: 200px; overflow:hidden; ">
+   <!--  play effect -->
+   <div class="big-song-img " >
+   <img src="images/2.jpg" class=" rounded img-fluid img-big">
+   <a href="#">
+      <div class="big-song-hover">
+     <i class="bi bi-play h1 text-primary" ></i>
+   </div>
+ </a>
+ </div>
+  <!--  play effect end -->
+   <div class="">
+     <div class="lead text-white">THE BOOK 2
+    </div>
+    <small class="text-muted">  YOASOBI</small>
+     
+   </div>
+  </div>
+       <!-- song card end -->
+          <!-- song card start -->
+  <div class="m-4  " style=" width: 200px; overflow:hidden; ">
+   <!--  play effect -->
+   <div class="big-song-img " >
+   <img src="images/12.jpg" class=" rounded img-fluid img-big">
+   <a href="#">
+      <div class="big-song-hover">
+     <i class="bi bi-play h1 text-primary" ></i>
+   </div>
+ </a>
+ </div>
+  <!--  play effect end -->
+   <div class="">
+     <div class="lead text-white">Eve
+</div>
+    <small class="text-muted">      Kaikai Kitan / Ao No Waltz</small>
+     
+   </div>
+  </div>
+       <!-- song card end -->
+          <!-- song card start -->
+  <div class="m-4  " style=" width: 200px; overflow:hidden; ">
+   <!--  play effect -->
+   <div class="big-song-img " >
+   <img src="images/15.jpg" class=" rounded img-fluid img-big">
+   <a href="#">
+      <div class="big-song-hover">
+     <i class="bi bi-play h1 text-primary" ></i>
+   </div>
+ </a>
+ </div>
+  <!--  play effect end -->
+   <div class="">
+     <div class="lead text-white">Suzume (feat. Toaka)
+      RADWIMPS</div>
+    <small class="text-muted">RADWIMPS</small>
+     
+   </div>
+  </div>
+       <!-- song card end -->
+          <!-- song card start -->
+  <div class="m-4  card-width " style=" width: 200px; overflow:hidden;  ">
+   <!--  play effect -->
+   <div class="big-song-img " >
+   <img src="images/13.jpg" class=" rounded img-fluid img-big">
+   <a href="#">
+      <div class="big-song-hover">
+     <i class="bi bi-play h1 text-primary" ></i>
+   </div>
+ </a>
+ </div>
+  <!--  play effect end -->
+   <div class="">
+     <div class="lead text-white">Color
+      </div>
+    <small class="text-muted">yama</small>
+     
+   </div>
+  </div>
+       <!-- song card end -->
+       </section>
+       <!-- country music -->
+      <!-- end category -->
+  </main>
+  <!-- main ends -->
+  <!-- media player  -->
+  <section class="z-1">
+    <div class="music-player">
+      <div class="song-bar">
+          <div class="song-infos">
+              <div class="image-container">
+                  <img src="images/16.jpg" alt="" />
+              </div>
+              <div class="song-description">
+                  <p class="title">
+                      Watashitachi wa Sou Yatte Ikite Iku Jinshu na no
+                  </p>
+                  <p class="artist">Masaru Yokoyama</p>
+              </div>
+          </div>
+          <div class="icons">
+            <i class="bi bi-suit-heart social-hide"></i>
+            <i class="bi bi-fullscreen-exit social-hide"></i>
+          </div>
+      </div>
+      <div class="progress-controller ">
+          <div class="control-buttons">
+            <i class="bi bi-shuffle social-hide"></i>
+            <i class="bi bi-skip-backward-btn-fill"></i>
+              <i class="play-pause  bi bi-play "></i>
+              <i class="bi bi-skip-forward-btn-fill"></i>
+              <i class="bi bi-arrow-counterclockwise social-hide"></i>
+          </div>
+          <div class="progress-container">
+              <span>0:49</span>
+              <div class="progress-bar">
+                  <div class="progress"></div>
+              </div>
+              <span>3:15</span>
+          </div>
+      </div>
+      <div class="other-features">
+        <i class="bi bi-list-ul social-hide"></i>
+        <i class="bi bi-tv social-hide"></i>
+          <div class="volume-bar  ">
+            <i class="bi bi-volume-down   "></i>
+              <div class="progress-bar social-hide ">
+                  <div class="progress"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
+  <!-- media player -->
+ 
+</body>
+
+</html>
